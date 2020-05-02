@@ -1,3 +1,5 @@
+//«аданы два массива из N, M  целых чисел. „исла в массивах изначально отсортированны по возрастанию, нет повтор€ющихс€ элементов.
+//«адача: слить два массива в один новый, чтобы числа в нем тоже были упор€дочены.
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
@@ -17,7 +19,6 @@ int main()
 	a = (int*)malloc(n * sizeof(int));
 	b = (int*)malloc(m * sizeof(int));
 	S = (int*)malloc(p * sizeof(int));
-
 	printf("Enter numbers for array a: \n");
 	for (i = 0; i < n; i++)
 	{
@@ -128,6 +129,7 @@ int main()
 			}
 		}
 	}
+	S = (int*)realloc(S,counter * sizeof(int));
 	for (k = 0; k < counter; k++)
 	{
 		printf("%d ", *(S + k));
